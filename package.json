@@ -1,0 +1,35 @@
+{
+  "name": "envdiff",
+  "version": "0.2.0",
+  "description": "Catch broken .env files before your app crashes — diff a .env against its .env.example, validate types, and flag committed secrets.",
+  "bin": {
+    "envdiff": "src/cli.js"
+  },
+  "main": "src/cli.js",
+  "scripts": {
+    "test": "node test/run.js",
+    "build:exe": "pkg . --targets node22-win-x64 --output dist/envdiff.exe"
+  },
+  "keywords": [
+    "dotenv",
+    "env",
+    "environment-variables",
+    "validation",
+    "cli",
+    "config",
+    "secrets",
+    "linter"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "bin_note": "zero runtime dependencies needed",
+  "pkg": {
+    "scripts": "src/**/*.js",
+    "assets": "package.json"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.21.0"
+  }
+}
